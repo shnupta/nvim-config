@@ -6,6 +6,7 @@ require("mini.statusline").setup()
 require("mini.sessions").setup()
 require("mini.indentscope").setup()
 require("mini.pairs").setup()
+require("mini.surround").setup()
 require("mini.notify").setup({
   lsp_progress = {
     duration_last = 2000,
