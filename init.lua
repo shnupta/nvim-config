@@ -1,0 +1,6 @@
+require("core")
+require("keymaps")
+require("plugins")
+require("filetypes")
+require("lsp")
+require("ui")
