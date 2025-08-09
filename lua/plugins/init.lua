@@ -20,6 +20,7 @@ MiniDeps.setup({ path = { package = path_package } })
 local add = MiniDeps.add
 
 add({ source = "tiagovla/tokyodark.nvim" })
+add({ source = "projekt0n/github-nvim-theme"})
 add({ source = "echasnovski/mini.nvim" })
 add({ source = "neovim/nvim-lspconfig" })
 add({ source = "nvim-treesitter/nvim-treesitter" })
@@ -32,6 +33,8 @@ add({
 	depends = { "rafamadriz/friendly-snippets" },
 	checkout = "v1.6.0"
 })
+add({ source = "folke/trouble.nvim" })
+add({ source = "tpope/vim-fugitive" })
 
 require("plugins.mini")
 require("plugins.lspconfig")
@@ -39,3 +42,4 @@ require("plugins.treesitter")
 require("plugins.nvimtree")
 require("plugins.gitsigns")
 require("plugins.cmp")
+require("plugins.trouble")

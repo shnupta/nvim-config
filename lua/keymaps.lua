@@ -32,6 +32,9 @@ vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Goto declaration" }
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Goto declaration" })
 vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { desc = "Goto type definition" })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Goto references" })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+vim.keymap.set("n", "sh", ":ClangdSwitchSourceHeader<CR>", { desc = "Switch source/header" })
+vim.keymap.set("n", "rn", vim.lsp.buf.rename, { desc = "Switch source/header" })
 
 -- turn off default vim mode indicator
 vim.g.noshowmode = true
@@ -39,10 +42,17 @@ vim.g.noshowmode = true
 -- copilot
 vim.g.copilot_proxy_strict_ssl = false
 vim.g.copilot_no_tab_map = true
-vim.keymap.set("i", "<C-Y>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.keymap.set("i", "<C-Y>", 'copilot#Accept("<CR>")', { silent = true, expr = true, replace_keycodes = false })
 
 -- tabs
 vim.keymap.set("n", "tt", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "tp", ":tabprevious<CR>", { desc = "Previous tab" })
 vim.keymap.set("n", "tn", ":tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "tc", ":tabclose<CR>", { desc = "Close tab" })
+
+-- trouble
+vim.keymap.set("n", "<leader>xx", ":Trouble diagnostics toggle<CR>", { desc = "Toggle trouble diagnostics" })
+
+-- git
+vim.keymap.set("n", "gB", ":Git blame<CR>", { desc = "Git blame" })
+vim.keymap.set("n", "gp", ":Git pull<CR>", { desc = "Git pull" })

@@ -12,5 +12,15 @@ vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
 
+vim.o.expandtab = false
+vim.o.shiftwidth = 2
+vim.o.smartindent = true
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.mouse = "a"
+
 -- globals
 vim.g.mapleader = " "

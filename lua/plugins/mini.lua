@@ -1,12 +1,22 @@
 require("mini.pick").setup()
-require("mini.git").setup()
 require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
 require("mini.starter").setup()
 require("mini.statusline").setup()
 require("mini.sessions").setup()
-require("mini.indentscope").setup()
+local indentscope = require("mini.indentscope")
+indentscope.setup({
+    draw = {
+        delay = 0,
+        animation = indentscope.gen_animation.none()
+    }
+})
 require("mini.pairs").setup()
-require("mini.surround").setup()
+require("mini.surround").setup({
+    mappings = {
+        highlight = ''
+    }
+})
 require("mini.notify").setup({
   lsp_progress = {
     duration_last = 2000,
